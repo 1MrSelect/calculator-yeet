@@ -30,6 +30,22 @@ def strt
     puts "Second Number (divisor)"
     num2 = gets.chomp
     method_division(num1, num2)
+  elsif operator == "Who's your daddy?"
+    puts "Are you master?"
+    master = gets.chomp
+    if master == "Yez"
+      puts "(RASPY BREATH)USER... YOU ARE MY FATHAAAAA"
+      pause = gets
+      strt
+    else 
+      puts "IMPOSTER!"
+      pause = gets
+      strt
+    end
+  else 
+    puts "INVALID INPUT!"
+    pause = gets
+    strt
   end
 end
     
