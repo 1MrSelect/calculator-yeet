@@ -1,35 +1,100 @@
-
+def strt
+  puts "Welcome to the Yeet 5quad Calculator."
+  puts "+,-,*,/"
+  operator = gets.chomp
+  if operator == "+"
+    puts "What would you like to add?"
+    puts "First Number"
+    num1 = gets.chomp
+    puts "Second Number"
+    num2 = gets.chomp
+    method_add(num1, num2)
+  elsif operator == "-"
+    puts "What would you like to subtract?"
+    puts "First Number"
+    num1 = gets.chomp
+    puts "Second Number"
+    num2 = gets.chomp
+    method_subtract(num1, num2)
+  elsif operator == "*"
+    puts "What would you like to multiply?"
+    puts "First Number"
+    num1 = gets.chomp
+    puts "Second Number"
+    num2 = gets.chomp
+    method_multiplication(num1, num2)
+  elsif operator == "/"
+    puts "What would you like to divide?"
+    puts "First Number (dividend)"
+    num1 = gets.chomp
+    puts "Second Number (divisor)"
+    num2 = gets.chomp
+    method_division(num1, num2)
+  elsif operator == "Who's your daddy?"
+    puts "Are you master?"
+    master = gets.chomp
+    if master == "Yez"
+      puts "(RASPY BREATH)USER... YOU ARE MY FATHAAAAA"
+      pause = gets
+      strt
+    else 
+      puts "IMPOSTER!"
+      pause = gets
+      strt
+    end
+  else 
+    puts "INVALID INPUT!"
+    pause = gets
+    strt
+  end
+end
+    
 def method_add(num1, num2)
-  a = num1 + num2 
+  a = num1.to_i + num2.to_i 
   puts a
-  puts "(R)epeat, (C)hange operator, (E)xit"
+  puts "(R)epeat, (E)xit"
   b = gets.chomp
-  if b == "R" 
-    method_add
-#   elsif b == "C"
-#     calc
-  elsif b == "E"
+  if b == "R" || b == "r"
+    strt
+  elsif b == "E" || b == "e"
     exit
 end
 end
-method_add("1", "2")
+    
+def method_subtract(num1, num2)
+  a = num1.to_i - num2.to_i
+  puts a
+  puts "(R)epeat, (E)xit"
+  b = gets.chomp
+  if b == "R" || b == "r"
+    strt
+  elsif b == "E" || b == "e"
+    exit
+  end
+end
 
+def method_multiplication(num1, num2)
+  a = num1.to_i * num2.to_i
+  puts a
+  puts "(R)epeat, (E)xit"
+  b = gets.chomp
+  if b == "R" || b == "r"
+    strt
+  elsif b == "E" || b == "e"
+    exit
+  end
+end
 
+def method_division(num1, num2)
+  a = num1.to_i / num2.to_i
+  puts a
+  puts "(R)epeat, (E)xit"
+  b = gets.chomp
+  if b == "R" || b == "r"
+    strt
+  elsif b == "E" || b == "e"
+    exit
+  end
+end
 
-
-# puts "+,-,*,/"
-# operator = gets.chomp
-# if operator == "+"
-#   puts method_add
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
+strt
